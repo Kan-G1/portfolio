@@ -22,6 +22,9 @@ function Footer() {
           <a href="#about" className="hover:text-zinc-300">About</a>
           <a href={`mailto:${profile.email}`} className="hover:text-zinc-300">Email</a>
           <a href={profile.github} target="_blank" rel="noreferrer" className="hover:text-zinc-300">GitHub</a>
+          {profile.linkedin && (
+            <a href={profile.linkedin} target="_blank" rel="noreferrer" className="hover:text-zinc-300">LinkedIn</a>
+          )}
         </div>
         <p className="text-xs text-zinc-600">Built with React & Tailwind</p>
       </div>

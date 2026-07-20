@@ -7,8 +7,7 @@ export const profile = {
   location: "Toronto, Canada",
   email: "kanishkghai343@gmail.com",
   github: "https://github.com/Kan-G1",
-  // TODO: add your LinkedIn URL here
-  linkedin: "",
+  linkedin: "https://www.linkedin.com/in/kanishk-g/",
   resume: "",
   available: true,
 };
