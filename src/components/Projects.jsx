@@ -37,7 +37,7 @@ function Links({ p }) {
         </a>
       )}
       {p.repoPrivate && !p.repo && (
-        <span className="chip !py-2 text-zinc-500">
+        <span className="chip !py-2 text-stone-500">
           <Lock size={12} /> Private repo
         </span>
       )}
@@ -53,7 +53,7 @@ function BrowserPreview({ p }) {
         <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f57]" />
         <span className="h-2.5 w-2.5 rounded-full bg-[#febc2e]" />
         <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" />
-        <div className="ml-2 flex-1 truncate rounded-md bg-black/40 px-3 py-1 text-[11px] text-zinc-500">
+        <div className="ml-2 flex-1 truncate rounded-md bg-black/40 px-3 py-1 text-[11px] text-stone-500">
           {p.live ? domainOf(p.live) : "localhost"}
         </div>
       </div>
@@ -93,12 +93,12 @@ function FeaturedCard({ p, i }) {
           >
             {p.kicker}
           </span>
-          <span className="text-xs text-zinc-600">{p.year}</span>
+          <span className="text-xs text-stone-600">{p.year}</span>
         </div>
         <div>
           <h3 className="font-display text-2xl font-bold text-white">{p.name}</h3>
-          <p className="mt-2 text-sm leading-relaxed text-zinc-400">{p.blurb}</p>
-          <p className="mt-3 text-sm leading-relaxed text-zinc-500">{p.detail}</p>
+          <p className="mt-2 text-sm leading-relaxed text-stone-400">{p.blurb}</p>
+          <p className="mt-3 text-sm leading-relaxed text-stone-500">{p.detail}</p>
         </div>
         <div className="mt-auto space-y-4 pt-1">
           <TagRow tags={p.tags} />
@@ -142,11 +142,11 @@ function GridCard({ p, i }) {
           >
             {p.kicker}
           </span>
-          <span className="text-[11px] text-zinc-600">{p.year}</span>
+          <span className="text-[11px] text-stone-600">{p.year}</span>
         </div>
         <div>
           <h3 className="font-display text-xl font-bold text-white">{p.name}</h3>
-          <p className="mt-2 text-sm leading-relaxed text-zinc-400">{p.blurb}</p>
+          <p className="mt-2 text-sm leading-relaxed text-stone-400">{p.blurb}</p>
         </div>
         <div className="mt-auto space-y-3.5 pt-1">
           <TagRow tags={p.tags} />
@@ -172,7 +172,7 @@ export default function Projects() {
             Things I've built &{" "}
             <span className="text-gradient">shipped</span>
           </h2>
-          <p className="mt-4 text-base text-zinc-400">
+          <p className="mt-4 text-base text-stone-400">
             Two of these are live in production today — including a real e-commerce
             business handling actual payments. The rest span mobile, cloud data, and
             observability.

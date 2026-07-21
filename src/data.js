@@ -26,7 +26,7 @@ export const projects = [
     kicker: "Live E-commerce · Real Business",
     year: "2025",
     featured: true,
-    accent: "#7c6cff",
+    accent: "#f5a623",
     blurb:
       "A full-stack e-commerce platform for a Delhi smartphone retailer — genuine, IMEI-verified phones sold online and in-store. “Smart phones. Smart deals.”",
     detail:
@@ -43,7 +43,7 @@ export const projects = [
     kicker: "Live · AI Requirements Engineering",
     year: "2025",
     featured: true,
-    accent: "#4fd1c5",
+    accent: "#ff6a4d",
     blurb:
       "An AI pipeline that turns raw stakeholder feedback into structured, prioritized, conflict-aware software requirements — my capstone project.",
     detail:
@@ -59,7 +59,7 @@ export const projects = [
     kicker: "Android App",
     year: "2025",
     featured: false,
-    accent: "#8b5cf6",
+    accent: "#ffce7a",
     blurb:
       "A native Android app to control and monitor smart devices in real time — with live power usage and location-based geofencing.",
     detail:
@@ -76,7 +76,7 @@ export const projects = [
     kicker: "Data Engineering · GCP",
     year: "2024",
     featured: false,
-    accent: "#4fd1c5",
+    accent: "#ff8a3d",
     blurb:
       "Batch and streaming data-processing pipelines on Google Cloud Dataflow — from word counts to real-time smart-meter and MNIST inference.",
     detail:
@@ -92,7 +92,7 @@ export const projects = [
     kicker: "Cloud · Monitoring",
     year: "2024",
     featured: false,
-    accent: "#7c6cff",
+    accent: "#f5a623",
     blurb:
       "A Node.js service instrumented with Azure Application Insights to demonstrate request, performance, exception, and custom-event telemetry.",
     detail:

@@ -46,7 +46,7 @@ export default function Nav() {
             <a
               key={l.href}
               href={l.href}
-              className="rounded-full px-4 py-2 text-sm font-medium text-zinc-400 transition-colors hover:text-white"
+              className="rounded-full px-4 py-2 text-sm font-medium text-stone-400 transition-colors hover:text-white"
             >
               {l.label}
             </a>
@@ -55,7 +55,7 @@ export default function Nav() {
             href={profile.github}
             target="_blank"
             rel="noreferrer"
-            className="ml-2 grid h-9 w-9 place-items-center rounded-full border border-white/10 text-zinc-300 transition-colors hover:border-white/25 hover:text-white"
+            className="ml-2 grid h-9 w-9 place-items-center rounded-full border border-white/10 text-stone-300 transition-colors hover:border-white/25 hover:text-white"
             aria-label="GitHub"
           >
             <Github size={16} />
@@ -88,7 +88,7 @@ export default function Nav() {
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-xl px-4 py-3 text-sm font-medium text-zinc-300 hover:bg-white/5 hover:text-white"
+                  className="rounded-xl px-4 py-3 text-sm font-medium text-stone-300 hover:bg-white/5 hover:text-white"
                 >
                   {l.label}
                 </a>
@@ -98,7 +98,7 @@ export default function Nav() {
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => setOpen(false)}
-                className="rounded-xl px-4 py-3 text-sm font-medium text-zinc-300 hover:bg-white/5 hover:text-white"
+                className="rounded-xl px-4 py-3 text-sm font-medium text-stone-300 hover:bg-white/5 hover:text-white"
               >
                 GitHub ↗
               </a>

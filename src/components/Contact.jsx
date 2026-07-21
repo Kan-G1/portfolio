@@ -38,7 +38,7 @@ export default function Contact() {
                 <span className="text-gradient">worth shipping.</span>
               </h2>
 
-              <p className="mx-auto mt-5 max-w-xl text-base text-zinc-400">
+              <p className="mx-auto mt-5 max-w-xl text-base text-stone-400">
                 Have a project, a role, or just an idea? I'd love to hear about it.
                 The fastest way to reach me is email.
               </p>
@@ -58,7 +58,7 @@ export default function Contact() {
                   href={profile.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="group flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-zinc-300 transition-colors hover:border-white/25 hover:text-white"
+                  className="group flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-stone-300 transition-colors duration-300 hover:border-white hover:text-white"
                 >
                   <Github size={16} /> GitHub
                   <ArrowUpRight size={13} className="opacity-0 transition-opacity group-hover:opacity-100" />
@@ -68,7 +68,7 @@ export default function Contact() {
                     href={profile.linkedin}
                     target="_blank"
                     rel="noreferrer"
-                    className="group flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-zinc-300 transition-colors hover:border-white/25 hover:text-white"
+                    className="group flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm text-stone-300 transition-colors duration-300 hover:border-[#0A66C2] hover:text-[#0A66C2]"
                   >
                     <Linkedin size={16} /> LinkedIn
                     <ArrowUpRight size={13} className="opacity-0 transition-opacity group-hover:opacity-100" />

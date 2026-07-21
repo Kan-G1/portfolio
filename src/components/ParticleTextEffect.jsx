@@ -8,12 +8,12 @@ import { useEffect, useRef } from "react";
  * Pure canvas — no external dependencies.
  */
 
-// on-brand particle colors (indigo / violet / mint / soft white)
+// ember particle colors (amber / gold / coral / warm cream)
 const BRAND_COLORS = [
-  { r: 124, g: 108, b: 255 },
-  { r: 157, g: 145, b: 255 },
-  { r: 79, g: 209, b: 197 },
-  { r: 226, g: 224, b: 255 },
+  { r: 245, g: 166, b: 35 }, // amber
+  { r: 255, g: 206, b: 122 }, // gold
+  { r: 255, g: 106, b: 77 }, // coral
+  { r: 243, g: 236, b: 221 }, // warm cream
 ];
 
 class Particle {
@@ -92,8 +92,8 @@ class Particle {
         g: this.startColor.g + (this.targetColor.g - this.startColor.g) * this.colorWeight,
         b: this.startColor.b + (this.targetColor.b - this.startColor.b) * this.colorWeight,
       };
-      // fade out toward transparent-dark
-      this.targetColor = { r: 8, g: 8, b: 12 };
+      // fade out toward the warm-dark background
+      this.targetColor = { r: 11, g: 10, b: 8 };
       this.colorWeight = 0;
       this.isKilled = true;
     }
@@ -222,7 +222,7 @@ export default function ParticleTextEffect({
         }
       }
       frameCountRef.current++;
-      if (frameCountRef.current % 260 === 0) {
+      if (frameCountRef.current % 240 === 0) {
         wordIndexRef.current = (wordIndexRef.current + 1) % words.length;
         nextWord(words[wordIndexRef.current]);
       }

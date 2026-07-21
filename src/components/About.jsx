@@ -11,7 +11,7 @@ function Marquee() {
         {row.map((t, i) => (
           <span
             key={i}
-            className="whitespace-nowrap rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm font-medium text-zinc-400"
+            className="whitespace-nowrap rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm font-medium text-stone-400"
           >
             {t}
           </span>
@@ -35,7 +35,7 @@ export default function About() {
               I like turning ideas into
               <span className="text-gradient"> real products.</span>
             </h2>
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-zinc-400">
+            <div className="mt-6 space-y-4 text-base leading-relaxed text-stone-400">
               <p>
                 I'm a software developer who's comfortable across the whole stack —
                 from pixel-level frontend polish to serverless backends, mobile apps,
@@ -44,15 +44,15 @@ export default function About() {
               </p>
               <p>
                 Recently that's meant building{" "}
-                <span className="text-zinc-200">Mobsmart</span>, a live e-commerce
+                <span className="text-stone-200">Mobsmart</span>, a live e-commerce
                 store processing real payments, and{" "}
-                <span className="text-zinc-200">Checklist</span>, an AI system that
+                <span className="text-stone-200">Checklist</span>, an AI system that
                 turns messy stakeholder feedback into structured software requirements.
                 I enjoy the messy middle — payments, auth, data modeling, and making
                 things feel fast.
               </p>
             </div>
-            <div className="mt-6 flex items-center gap-2 text-sm text-zinc-500">
+            <div className="mt-6 flex items-center gap-2 text-sm text-stone-500">
               <MapPin size={15} className="text-accent-soft" />
               {profile.location}
             </div>
@@ -61,7 +61,7 @@ export default function About() {
           {/* right: skills */}
           <Reveal delay={0.1}>
             <div className="glass rounded-2xl p-6 sm:p-7">
-              <h3 className="font-display text-sm font-semibold uppercase tracking-widest text-zinc-500">
+              <h3 className="font-display text-sm font-semibold uppercase tracking-widest text-stone-500">
                 Toolbox
               </h3>
               <div className="mt-5 space-y-5">

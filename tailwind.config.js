@@ -4,19 +4,24 @@ export default {
   theme: {
     extend: {
       colors: {
+        // warm near-black base (has a subtle brown warmth, not cold blue-black)
         ink: {
-          950: "#08080a",
-          900: "#0c0c0f",
-          800: "#141418",
-          700: "#1d1d23",
-          600: "#2a2a32",
+          950: "#0b0a08",
+          900: "#100e0b",
+          800: "#181510",
+          700: "#231d16",
+          600: "#31281d",
         },
+        // molten amber / gold primary
         accent: {
-          DEFAULT: "#7c6cff",
-          soft: "#9d91ff",
-          glow: "#5b4bff",
+          DEFAULT: "#f5a623",
+          soft: "#ffce7a",
+          glow: "#e0850f",
         },
-        mint: "#4fd1c5",
+        // warm coral for the second half of gradients
+        coral: "#ff6a4d",
+        // "available" signal dot (kept green by convention, warmed slightly)
+        mint: "#63d68f",
       },
       fontFamily: {
         sans: [
