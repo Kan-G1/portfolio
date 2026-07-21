@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Github, ArrowDown, Sparkles } from "lucide-react";
 import { profile, stats } from "../data.js";
+import ParticleTextEffect from "./ParticleTextEffect.jsx";
 
 function RotatingRole() {
   const [i, setI] = useState(0);
@@ -52,15 +53,17 @@ export default function Hero() {
             </div>
           )}
 
-          <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl">
-            Hi, I'm Kanishk —
-            <br />
-            <span className="text-gradient animate-shimmer">I build things</span>{" "}
-            <br className="hidden sm:block" />
-            that ship.
+          {/* Real headline for SEO + screen readers; the visual is the canvas below */}
+          <h1 className="sr-only">
+            Hi, I'm Kanishk — I build things that ship.
           </h1>
+          <div className="-ml-1 mt-1 w-full max-w-2xl">
+            <ParticleTextEffect
+              words={["KANISHK", "I BUILD", "THINGS", "THAT SHIP"]}
+            />
+          </div>
 
-          <p className="mt-6 text-lg font-medium text-zinc-400">
+          <p className="mt-2 text-lg font-medium text-zinc-400">
             <RotatingRole />
           </p>
 
