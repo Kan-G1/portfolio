@@ -8,6 +8,9 @@ export const profile = {
   email: "kanishkghai343@gmail.com",
   github: "https://github.com/Kan-G1",
   linkedin: "https://www.linkedin.com/in/kanishk-g/",
+  // drop a photo at public/me.jpg and set this to "/me.jpg" for the hex portrait
+  photo: "",
+  // drop your CV at public/resume.pdf and set this to "/resume.pdf"
   resume: "",
   available: true,
 };

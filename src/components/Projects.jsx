@@ -1,7 +1,43 @@
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Github, Lock, ExternalLink } from "lucide-react";
 import { projects } from "../data.js";
 import Reveal from "./Reveal.jsx";
+
+/* 3D tilt-on-hover wrapper: the card leans toward the cursor and pops up */
+function TiltCard({ className = "", children, max = 7 }) {
+  const ref = useRef(null);
+  const onMove = (e) => {
+    const el = ref.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width - 0.5;
+    const py = (e.clientY - r.top) / r.height - 0.5;
+    el.style.transform = `perspective(1100px) rotateX(${(-py * max).toFixed(
+      2
+    )}deg) rotateY(${(px * max).toFixed(2)}deg) translateY(-8px) scale(1.02)`;
+  };
+  const onLeave = () => {
+    const el = ref.current;
+    if (el) el.style.transform = "";
+  };
+  return (
+    <div
+      ref={ref}
+      onMouseMove={onMove}
+      onMouseLeave={onLeave}
+      className={className}
+      style={{
+        transition:
+          "transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.5s ease, border-color 0.5s ease",
+        transformStyle: "preserve-3d",
+        willChange: "transform",
+      }}
+    >
+      {children}
+    </div>
+  );
+}
 
 function domainOf(url) {
   try {
@@ -85,7 +121,7 @@ function FeaturedCard({ p, i }) {
   const primary = p.live || p.repo;
   return (
     <Reveal delay={i * 0.08} className="group relative">
-      <div className="glow-ring glass glass-hover relative flex h-full flex-col gap-5 rounded-2xl p-5 sm:p-6">
+      <TiltCard className="glow-ring glass glass-hover relative flex h-full flex-col gap-5 rounded-2xl p-5 sm:p-6">
         {/* whole card is clickable → primary destination */}
         {primary && (
           <a
@@ -115,7 +151,7 @@ function FeaturedCard({ p, i }) {
           <TagRow tags={p.tags} />
           <Links p={p} />
         </div>
-      </div>
+      </TiltCard>
     </Reveal>
   );
 }
@@ -124,7 +160,7 @@ function GridCard({ p, i }) {
   const primary = p.live || p.repo;
   return (
     <Reveal delay={i * 0.06} className="group relative h-full">
-      <div className="glass glass-hover relative flex h-full flex-col gap-4 overflow-hidden rounded-2xl p-5">
+      <TiltCard className="glass glass-hover relative flex h-full flex-col gap-4 overflow-hidden rounded-2xl p-5">
         {primary && (
           <a
             href={primary}
@@ -173,7 +209,7 @@ function GridCard({ p, i }) {
           <TagRow tags={p.tags} />
           <Links p={p} />
         </div>
-      </div>
+      </TiltCard>
     </Reveal>
   );
 }

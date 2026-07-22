@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Github, ArrowDown, Sparkles } from "lucide-react";
 import { profile, stats } from "../data.js";
 import ParticleTextEffect from "./ParticleTextEffect.jsx";
+import HexImage from "./HexImage.jsx";
 
 function RotatingRole() {
   const [i, setI] = useState(0);
@@ -37,11 +38,12 @@ export default function Hero() {
       <div className="pointer-events-none absolute top-24 right-[8%] -z-10 h-72 w-72 rounded-full bg-coral/15 blur-[110px] animate-float" />
 
       <div className="container-x">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.55fr_0.85fr]">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-3xl"
+          className="w-full"
         >
           {profile.available && (
             <div className="chip mb-7 !py-1.5">
@@ -98,6 +100,16 @@ export default function Hero() {
             ))}
           </div>
         </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.9, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            className="hidden justify-self-center lg:block"
+          >
+            <HexImage />
+          </motion.div>
+        </div>
       </div>
 
       <a

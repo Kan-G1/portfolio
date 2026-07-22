@@ -124,6 +124,9 @@ export default function ParticleTextEffect({
   const frameCountRef = useRef(0);
   const wordIndexRef = useRef(0);
   const runningRef = useRef(false);
+  // when to advance to the next word; the name (index 0) holds longer so it
+  // fully forms and pauses before dissolving
+  const nextAtRef = useRef(360);
 
   const pixelSteps = 6;
 
@@ -232,9 +235,12 @@ export default function ParticleTextEffect({
         }
       }
       frameCountRef.current++;
-      if (frameCountRef.current % 210 === 0) {
+      if (frameCountRef.current >= nextAtRef.current) {
         wordIndexRef.current = (wordIndexRef.current + 1) % words.length;
         nextWord(words[wordIndexRef.current]);
+        // name holds ~6s (forms + pause); other words ~3.5s
+        nextAtRef.current =
+          frameCountRef.current + (wordIndexRef.current === 0 ? 360 : 210);
       }
       animationRef.current = requestAnimationFrame(animate);
     };
