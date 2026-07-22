@@ -111,9 +111,20 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="relative hidden h-[500px] w-full lg:block"
+            className="relative hidden h-[460px] w-full items-center lg:flex"
           >
-            <InteractiveRobot className="h-full w-full" />
+            {/* warm glow to ground the robot in the scene */}
+            <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/25 blur-[90px]" />
+            {/* hue-shift the (natively purple) robot into the amber palette */}
+            <div
+              className="h-full w-full"
+              style={{
+                filter:
+                  "hue-rotate(135deg) sepia(0.4) saturate(1.9) brightness(1.1)",
+              }}
+            >
+              <InteractiveRobot className="h-full w-full" />
+            </div>
           </motion.div>
         </div>
       </div>
