@@ -113,9 +113,9 @@ function generateRandomPos(x, y, mag, w, h) {
 }
 
 export default function ParticleTextEffect({
-  words = ["KANISHK", "I BUILD", "THINGS", "THAT SHIP"],
+  words = ["KANISHK\nGHAI", "I BUILD", "THINGS", "THAT SHIP"],
   width = 1000,
-  height = 340,
+  height = 420,
   className = "",
 }) {
   const canvasRef = useRef(null);
@@ -140,20 +140,30 @@ export default function ParticleTextEffect({
       off.height = canvas.height;
       const octx = off.getContext("2d");
 
-      // auto-fit font to the canvas width
-      let fontSize = 150;
+      // supports multi-line words ("KANISHK\nGHAI"); auto-fit to width AND height
+      const lines = String(word).split("\n");
       const pad = 24;
+      const maxW = canvas.width - pad * 2;
+      const maxH = canvas.height - pad * 1.4;
+      const lineGap = 1.04;
+      let fontSize = 150;
       const setFont = (s) => (octx.font = `700 ${s}px 'Space Grotesk', system-ui, Arial, sans-serif`);
       setFont(fontSize);
-      while (octx.measureText(word).width > canvas.width - pad * 2 && fontSize > 24) {
-        fontSize -= 4;
+      const widest = () => Math.max(...lines.map((l) => octx.measureText(l).width));
+      while (
+        fontSize > 24 &&
+        (widest() > maxW || fontSize * lineGap * lines.length > maxH)
+      ) {
+        fontSize -= 3;
         setFont(fontSize);
       }
 
       octx.fillStyle = "white";
       octx.textAlign = "left";
       octx.textBaseline = "middle";
-      octx.fillText(word, pad, canvas.height / 2);
+      const lineH = fontSize * lineGap;
+      const startY = canvas.height / 2 - (lineH * lines.length) / 2 + lineH / 2;
+      lines.forEach((l, idx) => octx.fillText(l, pad, startY + idx * lineH));
 
       const pixels = octx.getImageData(0, 0, canvas.width, canvas.height).data;
       const newColor = BRAND_COLORS[Math.floor(Math.random() * BRAND_COLORS.length)];
@@ -222,7 +232,7 @@ export default function ParticleTextEffect({
         }
       }
       frameCountRef.current++;
-      if (frameCountRef.current % 240 === 0) {
+      if (frameCountRef.current % 210 === 0) {
         wordIndexRef.current = (wordIndexRef.current + 1) % words.length;
         nextWord(words[wordIndexRef.current]);
       }

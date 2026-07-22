@@ -59,7 +59,7 @@ export default function Hero() {
           </h1>
           <div className="-ml-1 mt-1 w-full max-w-2xl">
             <ParticleTextEffect
-              words={["KANISHK", "GHAI", "I BUILD", "THINGS", "THAT SHIP"]}
+              words={["KANISHK\nGHAI", "I BUILD", "THINGS", "THAT SHIP"]}
             />
           </div>
 

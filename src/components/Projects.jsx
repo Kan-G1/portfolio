@@ -82,9 +82,20 @@ function BrowserPreview({ p }) {
 }
 
 function FeaturedCard({ p, i }) {
+  const primary = p.live || p.repo;
   return (
     <Reveal delay={i * 0.08} className="group relative">
       <div className="glow-ring glass glass-hover relative flex h-full flex-col gap-5 rounded-2xl p-5 sm:p-6">
+        {/* whole card is clickable → primary destination */}
+        {primary && (
+          <a
+            href={primary}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Open ${p.name}`}
+            className="absolute inset-0 z-[1] rounded-2xl"
+          />
+        )}
         <BrowserPreview p={p} />
         <div className="flex items-center justify-between">
           <span
@@ -100,7 +111,7 @@ function FeaturedCard({ p, i }) {
           <p className="mt-2 text-sm leading-relaxed text-stone-400">{p.blurb}</p>
           <p className="mt-3 text-sm leading-relaxed text-stone-500">{p.detail}</p>
         </div>
-        <div className="mt-auto space-y-4 pt-1">
+        <div className="relative z-[2] mt-auto space-y-4 pt-1">
           <TagRow tags={p.tags} />
           <Links p={p} />
         </div>
@@ -110,9 +121,19 @@ function FeaturedCard({ p, i }) {
 }
 
 function GridCard({ p, i }) {
+  const primary = p.live || p.repo;
   return (
     <Reveal delay={i * 0.06} className="group relative h-full">
       <div className="glass glass-hover relative flex h-full flex-col gap-4 overflow-hidden rounded-2xl p-5">
+        {primary && (
+          <a
+            href={primary}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Open ${p.name}`}
+            className="absolute inset-0 z-[1] rounded-2xl"
+          />
+        )}
         {p.image ? (
           <div className="relative -mx-5 -mt-5 mb-1 h-44 overflow-hidden border-b border-white/10 bg-ink-900">
             <img
@@ -148,7 +169,7 @@ function GridCard({ p, i }) {
           <h3 className="font-display text-xl font-bold text-white">{p.name}</h3>
           <p className="mt-2 text-sm leading-relaxed text-stone-400">{p.blurb}</p>
         </div>
-        <div className="mt-auto space-y-3.5 pt-1">
+        <div className="relative z-[2] mt-auto space-y-3.5 pt-1">
           <TagRow tags={p.tags} />
           <Links p={p} />
         </div>
