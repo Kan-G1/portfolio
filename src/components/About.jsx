@@ -32,12 +32,16 @@ export default function About() {
               <Code2 size={12} /> About
             </span>
             <h2 className="font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">
-              I like turning ideas into
-              <span className="text-gradient"> real products.</span>
+              Hey, I'm Kanishk —
+              <span className="text-gradient"> nice to meet you.</span>
             </h2>
             <div className="mt-6 space-y-4 text-base leading-relaxed text-stone-400">
               <p>
-                I'm a software developer who's comfortable across the whole stack —
+                I'm a{" "}
+                <span className="text-stone-200">
+                  recent Software Engineering graduate from Ontario Tech University
+                </span>{" "}
+                in Canada, and a developer who's comfortable across the whole stack —
                 from pixel-level frontend polish to serverless backends, mobile apps,
                 and cloud data pipelines. I care most about work that actually ships
                 and gets used.

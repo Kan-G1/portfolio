@@ -5,7 +5,7 @@ import { projects } from "../data.js";
 import Reveal from "./Reveal.jsx";
 
 /* 3D tilt-on-hover wrapper: the card leans toward the cursor and pops up */
-function TiltCard({ className = "", children, max = 7 }) {
+function TiltCard({ className = "", children, max = 11 }) {
   const ref = useRef(null);
   const onMove = (e) => {
     const el = ref.current;
@@ -13,9 +13,9 @@ function TiltCard({ className = "", children, max = 7 }) {
     const r = el.getBoundingClientRect();
     const px = (e.clientX - r.left) / r.width - 0.5;
     const py = (e.clientY - r.top) / r.height - 0.5;
-    el.style.transform = `perspective(1100px) rotateX(${(-py * max).toFixed(
+    el.style.transform = `perspective(850px) rotateX(${(-py * max).toFixed(
       2
-    )}deg) rotateY(${(px * max).toFixed(2)}deg) translateY(-8px) scale(1.02)`;
+    )}deg) rotateY(${(px * max).toFixed(2)}deg) translateY(-12px) scale(1.035)`;
   };
   const onLeave = () => {
     const el = ref.current;

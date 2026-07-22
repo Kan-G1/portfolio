@@ -6,6 +6,7 @@ import { profile } from "../data.js";
 const links = [
   { label: "Work", href: "#work" },
   { label: "About", href: "#about" },
+  { label: "Experience", href: "#journey" },
   { label: "Contact", href: "#contact" },
 ];
 

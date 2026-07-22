@@ -3,7 +3,7 @@ export const profile = {
   name: "Kanishk Ghai",
   roles: ["Full-stack Developer", "Mobile & Cloud", "AI-powered products"],
   tagline:
-    "I design and ship full-stack web, mobile, and AI products — from a live e-commerce store handling real payments to an AI pipeline that turns messy stakeholder input into structured software specs.",
+    "Hey — I'm a recent Software Engineering grad from Ontario Tech University in Canada. I design and ship full-stack web, mobile, and AI products — from a live e-commerce store handling real payments to an AI pipeline that turns messy stakeholder feedback into clean, structured software specs.",
   location: "Toronto, Canada",
   email: "kanishkghai343@gmail.com",
   github: "https://github.com/Kan-G1",
@@ -109,29 +109,85 @@ export const projects = [
 
 export const skillGroups = [
   {
+    label: "Languages",
+    items: ["JavaScript", "TypeScript", "Java", "Python", "Kotlin", "C++", "SQL"],
+  },
+  {
     label: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"],
+    items: ["React", "Next.js", "Tailwind CSS", "Bootstrap", "Framer Motion"],
   },
   {
     label: "Backend & Data",
-    items: ["Node.js", "Python", "Supabase", "Firebase", "PostgreSQL", "REST APIs"],
+    items: ["Node.js", "Spring Boot", "Supabase", "Firebase", "PostgreSQL", "REST APIs"],
   },
   {
     label: "Mobile",
-    items: ["Kotlin", "Android SDK", "Jetpack", "Firestore"],
+    items: ["Android (Kotlin)", "Swift (iOS)", "Firestore", "Jetpack"],
   },
   {
-    label: "Cloud & Infra",
-    items: ["Vercel", "GCP Dataflow", "Azure", "AWS S3", "Apache Beam"],
-  },
-  {
-    label: "AI & Integrations",
-    items: ["OpenAI", "Embeddings", "Razorpay", "Resend"],
+    label: "Cloud & Tools",
+    items: ["AWS", "GCP", "Azure", "Vercel", "Git", "Agile"],
   },
 ];
 
 // marquee tech list
 export const marquee = [
-  "React", "Next.js", "TypeScript", "Node.js", "Python", "Kotlin",
-  "Supabase", "Firebase", "OpenAI", "GCP", "Azure", "AWS", "Tailwind", "Three.js",
+  "React", "Next.js", "TypeScript", "Node.js", "Java", "Python", "Kotlin",
+  "Swift", "Supabase", "Firebase", "OpenAI", "GCP", "Azure", "AWS", "Tailwind",
+];
+
+// ── Education, experience & leadership (from résumé) ────────────────────────
+export const education = {
+  school: "Ontario Tech University",
+  degree: "B.Eng — Software Engineering",
+  period: "2022 – 2026",
+  location: "Oshawa, Canada",
+  coursework: [
+    "Data Structures & Algorithms",
+    "Machine Learning",
+    "Artificial Intelligence",
+    "Object-Oriented Programming",
+    "Computer Organization",
+    "Statistics",
+  ],
+};
+
+export const experience = [
+  {
+    role: "Web Development Intern",
+    org: "Urbania Fashion",
+    period: "May – Sep 2023",
+    location: "New Delhi, India",
+    points: [
+      "Built React.js interfaces and Node.js / SQL backends under agile, cutting page load times by 40% across devices.",
+      "Applied SEO and HTML/CSS optimizations that grew the e-commerce store's organic traffic by 20%.",
+    ],
+  },
+  {
+    role: "Customer Service Associate",
+    org: "Walmart",
+    period: "Nov 2021 – Present",
+    location: "Whitby, Canada",
+    points: [
+      "Deliver high-quality customer service while supporting cross-functional store operations — inventory audits, promotions, and more.",
+      "Resolve issues quickly and drive small process improvements, sharpening communication under pressure.",
+    ],
+  },
+];
+
+export const leadership = [
+  {
+    role: "Planning Executive",
+    org: "Hindu Student Association",
+    period: "Aug 2023 – Present",
+    point:
+      "Lead planning for a 30+ member organization — running events, coordinating a board of executives, and community outreach.",
+  },
+  {
+    role: "Student Fundraising Associate",
+    org: "TNI — The Network Inc.",
+    period: "May – Jul 2023",
+    point:
+      "Ran fundraising campaigns with the Red Cross and UNICEF, exceeding targets by 15% through planning and execution.",
+  },
 ];

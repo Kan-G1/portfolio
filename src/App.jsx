@@ -2,6 +2,7 @@ import Nav from "./components/Nav.jsx";
 import Hero from "./components/Hero.jsx";
 import Projects from "./components/Projects.jsx";
 import About from "./components/About.jsx";
+import Journey from "./components/Journey.jsx";
 import Contact from "./components/Contact.jsx";
 import CustomCursor from "./components/CustomCursor.jsx";
 import { profile } from "./data.js";
@@ -42,6 +43,7 @@ export default function App() {
         <Hero />
         <Projects />
         <About />
+        <Journey />
         <Contact />
       </main>
       <Footer />
