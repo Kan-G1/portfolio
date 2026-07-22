@@ -10,8 +10,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/kanishk-g/",
   // drop a photo at public/me.jpg and set this to "/me.jpg" for the hex portrait
   photo: "",
-  // drop your CV at public/resume.pdf and set this to "/resume.pdf"
-  resume: "",
+  resume: "/resume.pdf",
   available: true,
 };
 
@@ -154,23 +153,34 @@ export const education = {
 
 export const experience = [
   {
-    role: "Web Development Intern",
-    org: "Urbania Fashion",
-    period: "May – Sep 2023",
+    role: "Full Stack Engineer",
+    org: "Urbania Fashion (Mobsmart)",
+    period: "2026 – Present",
     location: "New Delhi, India",
     points: [
-      "Built React.js interfaces and Node.js / SQL backends under agile, cutting page load times by 40% across devices.",
-      "Applied SEO and HTML/CSS optimizations that grew the e-commerce store's organic traffic by 20%.",
+      "Architected and built the Mobsmart e-commerce platform from the ground up with React.js, Node.js, SQL and a responsive UI.",
+      "Designed RESTful APIs, database integrations and secure authentication for accounts and order processing.",
+      "Applied technical SEO, structured metadata and performance work — lifting organic traffic by ~40%.",
+    ],
+  },
+  {
+    role: "Operational Head",
+    org: "New Excellent Televentures",
+    period: "2026 – Present",
+    location: "Whitby, Canada",
+    points: [
+      "Lead daily operations for a 5-person team across Amazon, Flipkart and Shopsee marketplaces.",
+      "Own listings, pricing, inventory sync, promotions and fulfillment, and analyze marketplace metrics for growth.",
     ],
   },
   {
     role: "Customer Service Associate",
     org: "Walmart",
-    period: "Nov 2021 – Present",
+    period: "2021 – 2026",
     location: "Whitby, Canada",
     points: [
-      "Deliver high-quality customer service while supporting cross-functional store operations — inventory audits, promotions, and more.",
-      "Resolve issues quickly and drive small process improvements, sharpening communication under pressure.",
+      "Partnered with department managers on retail operations, merchandising and customer experience.",
+      "Supported inventory audits, price checks and promotions; resolved issues and drove process improvements.",
     ],
   },
 ];

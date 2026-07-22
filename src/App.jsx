@@ -22,6 +22,9 @@ function Footer() {
         <div className="flex items-center gap-5 text-sm text-stone-500">
           <a href="#work" className="hover:text-stone-300">Work</a>
           <a href="#about" className="hover:text-stone-300">About</a>
+          {profile.resume && (
+            <a href={profile.resume} target="_blank" rel="noreferrer" className="hover:text-stone-300">Résumé</a>
+          )}
           <a href={`mailto:${profile.email}`} className="hover:text-stone-300">Email</a>
           <a href={profile.github} target="_blank" rel="noreferrer" className="hover:text-stone-300">GitHub</a>
           {profile.linkedin && (

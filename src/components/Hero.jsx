@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, Github, ArrowDown, Sparkles } from "lucide-react";
+import { ArrowUpRight, Github, ArrowDown, Sparkles, Download } from "lucide-react";
 import { profile, stats } from "../data.js";
 import ParticleTextEffect from "./ParticleTextEffect.jsx";
-import HexImage from "./HexImage.jsx";
+import InteractiveRobot from "./InteractiveRobot.jsx";
 
 function RotatingRole() {
   const [i, setI] = useState(0);
@@ -78,6 +78,12 @@ export default function Hero() {
               View my work
               <ArrowUpRight size={16} />
             </a>
+            {profile.resume && (
+              <a href={profile.resume} target="_blank" rel="noreferrer" className="btn-ghost">
+                <Download size={16} />
+                Résumé
+              </a>
+            )}
             <a href={profile.github} target="_blank" rel="noreferrer" className="btn-ghost">
               <Github size={16} />
               GitHub
@@ -102,12 +108,12 @@ export default function Hero() {
         </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.92 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="hidden justify-self-center lg:block"
+            className="relative hidden h-[500px] w-full lg:block"
           >
-            <HexImage />
+            <InteractiveRobot className="h-full w-full" />
           </motion.div>
         </div>
       </div>
