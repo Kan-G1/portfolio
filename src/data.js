@@ -125,7 +125,7 @@ export const skillGroups = [
   },
   {
     label: "Cloud & Tools",
-    items: ["AWS", "GCP", "Azure", "Vercel", "Git", "Agile"],
+    items: ["AWS", "GCP", "Azure", "Docker", "Vercel", "Git", "Agile"],
   },
 ];
 
@@ -156,7 +156,7 @@ export const experience = [
     role: "Full Stack Engineer",
     org: "Urbania Fashion (Mobsmart)",
     period: "2026 – Present",
-    location: "New Delhi, India",
+    location: "Delhi, India",
     points: [
       "Architected and built the Mobsmart e-commerce platform from the ground up with React.js, Node.js, SQL and a responsive UI.",
       "Designed RESTful APIs, database integrations and secure authentication for accounts and order processing.",
@@ -167,14 +167,14 @@ export const experience = [
     role: "Operational Head",
     org: "New Excellent Televentures",
     period: "2026 – Present",
-    location: "Whitby, Canada",
+    location: "Delhi, India",
     points: [
       "Lead daily operations for a 5-person team across Amazon, Flipkart and Shopsee marketplaces.",
       "Own listings, pricing, inventory sync, promotions and fulfillment, and analyze marketplace metrics for growth.",
     ],
   },
   {
-    role: "Customer Service Associate",
+    role: "Operations Assistant",
     org: "Walmart",
     period: "2021 – 2026",
     location: "Whitby, Canada",
